@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .productCard{
+        border: royalblue solid 1px;
+        padding: 100px;
+        position: relative;
+        font-size: larger;
+        
+    }
+    .productCard:before{
+        content: '';
+        color: #fff;
+        cursor: pointer;   
+        font-size: 2rem;
+        font-weight: 400;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color: rgba(40, 40, 234,0.4);
+        transition: .3s;
+        
+    }
+    .productCard:hover::before{
+        content: 'Acheter';
+        width: 100%;
+        transition: .3s;
+
+    }
+    label{
+        position: relative;
+        top: 150px;
+    }
+    #result{
+        margin-top: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+</style>
+</head>
+
+<body>
+    <label for="">
+        <center><input type="text" class="choiceInput"><button id="searchBtn">Acheter</button> </center>
+        <div class="rep"></div>
+    </label>
+    <div id="result"></div>
+
+<script src="./fruits.js"></script>
+</body>
+
+</html>
